@@ -1,131 +1,203 @@
-
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCashRegister, faChartLine, faCloudUploadAlt, faPlus, faRocket, faTasks, faUserShield } from '@fortawesome/free-solid-svg-icons';
-import { Col, Row, Button, Dropdown, ButtonGroup } from '@themesberg/react-bootstrap';
 
-import { CounterWidget, CircleChartWidget, BarChartWidget, TeamMembersWidget, ProgressTrackWidget, RankingWidget, SalesValueWidget, SalesValueWidgetPhone, AcquisitionWidget } from "../../components/Widgets";
-import { PageVisitsTable } from "../../components/Tables";
-import { trafficShares, totalOrders } from "../../data/charts";
+
+import customerType from "../../assets/images/Univariate/customerType.png"; 
+import distributionChannel from "../../assets/images/Univariate/distributionChannel.png"; 
+import marketSegment from "../../assets/images/Univariate/marketSegment.png"; 
+import cancellations from "../../assets/images/Univariate/cancellations.png"; 
+import countries from "../../assets/images/Univariate/countries.png"; 
+import adr from "../../assets/images/Univariate/adr.png"; 
+
+import adr_cancellation from "../../assets/images/Multivariate/adr_cancellation.png"; 
+import customerType_cancellation from "../../assets/images/Multivariate/customerType_cancellation.png"; 
+import deposit_cancellation from "../../assets/images/Multivariate/deposit_cancellation.png"; 
+import leadTime_cancellation from "../../assets/images/Multivariate/leadTime_cancellation.png"; 
+import marketSegment_cancellation from "../../assets/images/Multivariate/marketSegment_cancellation.png"; 
+import parking_cancellation from "../../assets/images/Multivariate/parking_cancellation.png"; 
+import prevCancel_cancellation from "../../assets/images/Multivariate/prevCancel_cancellation.png"; 
+
+
+import repeatedGuests from "../../assets/images/CustomerLoyalty/repeatedGuests.png"; 
+import repeated_cancellation from "../../assets/images/CustomerLoyalty/repeated_cancellation.png"; 
+import rnights from "../../assets/images/CustomerLoyalty/rnights.png"; 
+import rleadtime from "../../assets/images/CustomerLoyalty/rleadtime.png"; 
+import rdistributionChannel from "../../assets/images/CustomerLoyalty/rdistributionChannel.png"; 
+import rcustomerType from "../../assets/images/CustomerLoyalty/rcustomerType.png"; 
 
 export default () => {
   return (
     <>
-      <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
-        <Dropdown className="btn-toolbar">
-          <Dropdown.Toggle as={Button} variant="primary" size="sm" className="me-2">
-            <FontAwesomeIcon icon={faPlus} className="me-2" />New Task
-          </Dropdown.Toggle>
-          <Dropdown.Menu className="dashboard-dropdown dropdown-menu-left mt-2">
-            <Dropdown.Item className="fw-bold">
-              <FontAwesomeIcon icon={faTasks} className="me-2" /> New Task
-            </Dropdown.Item>
-            <Dropdown.Item className="fw-bold">
-              <FontAwesomeIcon icon={faCloudUploadAlt} className="me-2" /> Upload Files
-            </Dropdown.Item>
-            <Dropdown.Item className="fw-bold">
-              <FontAwesomeIcon icon={faUserShield} className="me-2" /> Preview Security
-            </Dropdown.Item>
+      <div className=" py-4">
+        <h1>Univariate Analysis</h1>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+              <div class="card-body">
+                <h5 class="card-title"></h5>
+                <img src={cancellations} alt="Logo" />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+              <div class="card-body">
+                <img src={countries} alt="Logo" />
+              </div>
+            </div>
+          </div>
 
-            <Dropdown.Divider />
+          <div class="col-md-3">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+              <div class="card-body">
+                <img src={customerType} alt="Logo" />
+              </div>
+            </div>
+          </div>
+        </div>
 
-            <Dropdown.Item className="fw-bold">
-              <FontAwesomeIcon icon={faRocket} className="text-danger me-2" /> Upgrade to Pro
-            </Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+              <div class="card-body">
+                <div className="row">
+                  <div className="col-md-6">
+                    {" "}
+                    <img src={distributionChannel} alt="Logo" />
+                  </div>
+                  <div className="col-md-6">
+                    {" "}
+                    <img src={marketSegment} alt="Logo" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+              <div class="card-body">
+                <img src={adr} alt="Logo" />
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <ButtonGroup>
-          <Button variant="outline-primary" size="sm">Share</Button>
-          <Button variant="outline-primary" size="sm">Export</Button>
-        </ButtonGroup>
+        <h1>Multivariate Analysis</h1>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+              <div class="card-body">
+                <h5 class="card-title"></h5>
+                <img src={adr_cancellation} alt="Logo" />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+              <div class="card-body">
+                <img src={leadTime_cancellation} alt="Logo" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+              <div class="card-body">
+                <img src={prevCancel_cancellation} alt="Logo" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+              <div class="card-body">
+                <h5 class="card-title"></h5>
+                <img src={parking_cancellation} alt="Logo" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+              <div class="card-body">
+                <h5 class="card-title"></h5>
+                <img src={deposit_cancellation} alt="Logo" />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+              <div class="card-body">
+                <img src={customerType_cancellation} alt="Logo" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+              <div class="card-body">
+                <img src={marketSegment_cancellation} alt="Logo" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h1>Customer Loyalty</h1>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+              <div class="card-body">
+                <h5 class="card-title"></h5>
+                <img src={repeatedGuests} alt="Logo" />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+              <div class="card-body">
+                <img src={rnights} alt="Logo" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+              <div class="card-body">
+                <img src={repeated_cancellation} alt="Logo" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+              <div class="card-body">
+                <h5 class="card-title"></h5>
+                <img src={rleadtime} alt="Logo" />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+              <div class="card-body">
+                <img src={rcustomerType} alt="Logo" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+              <div class="card-body">
+                <img src={rdistributionChannel} alt="Logo" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <Row className="justify-content-md-center">
-        <Col xs={12} className="mb-4 d-none d-sm-block">
-          <SalesValueWidget
-            title="Sales Value"
-            value="10,567"
-            percentage={10.57}
-          />
-        </Col>
-        <Col xs={12} className="mb-4 d-sm-none">
-          <SalesValueWidgetPhone
-            title="Sales Value"
-            value="10,567"
-            percentage={10.57}
-          />
-        </Col>
-        <Col xs={12} sm={6} xl={4} className="mb-4">
-          <CounterWidget
-            category="Customers"
-            title="345k"
-            period="Feb 1 - Apr 1"
-            percentage={18.2}
-            icon={faChartLine}
-            iconColor="shape-secondary"
-          />
-        </Col>
-
-        <Col xs={12} sm={6} xl={4} className="mb-4">
-          <CounterWidget
-            category="Revenue"
-            title="$43,594"
-            period="Feb 1 - Apr 1"
-            percentage={28.4}
-            icon={faCashRegister}
-            iconColor="shape-tertiary"
-          />
-        </Col>
-
-        <Col xs={12} sm={6} xl={4} className="mb-4">
-          <CircleChartWidget
-            title="Traffic Share"
-            data={trafficShares} />
-        </Col>
-      </Row>
-
-      <Row>
-        <Col xs={12} xl={12} className="mb-4">
-          <Row>
-            <Col xs={12} xl={8} className="mb-4">
-              <Row>
-                <Col xs={12} className="mb-4">
-                  <PageVisitsTable />
-                </Col>
-
-                <Col xs={12} lg={6} className="mb-4">
-                  <TeamMembersWidget />
-                </Col>
-
-                <Col xs={12} lg={6} className="mb-4">
-                  <ProgressTrackWidget />
-                </Col>
-              </Row>
-            </Col>
-
-            <Col xs={12} xl={4}>
-              <Row>
-                <Col xs={12} className="mb-4">
-                  <BarChartWidget
-                    title="Total orders"
-                    value={452}
-                    percentage={18.2}
-                    data={totalOrders} />
-                </Col>
-
-                <Col xs={12} className="px-0 mb-4">
-                  <RankingWidget />
-                </Col>
-
-                <Col xs={12} className="px-0">
-                  <AcquisitionWidget />
-                </Col>
-              </Row>
-            </Col>
-          </Row>
-        </Col>
-      </Row>
     </>
   );
 };
