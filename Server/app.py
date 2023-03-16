@@ -88,8 +88,8 @@ def predict_cancellation():
     
     response = jsonify({
         'prediction': int(data[0]),
-        'confirmation_probality': round((((data[1])[0])[0])*100,2), #confirmation prob
-        'cancellation_probality': round((((data[1])[0])[1])*100,2) #cancellation prob
+        'confirmation_probability': round((((data[1])[0])[0])*100,2), #confirmation prob
+        'cancellation_probability': round((((data[1])[0])[1])*100,2) #cancellation prob
 
     })
     response.headers.add('Access-Control-Allow-Origin', '*',)

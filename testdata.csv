@@ -1,3 +1,8 @@
 arrival_date_month,arrival_date_day_of_month,total_stays,deposit_type,lead_time,total_of_special_requests,previous_cancellations,adr,customer_type,required_car_parking_spaces,booking_changes,market_segment
 April,1,1,No Deposit,12,1,1,233,Group,1,1,Direct
 May,2,1,No Deposit,12,1,1,12,Group,1,1,Direct
+July,10,3,No Deposit,50,2,0,120.50,Transient,1,1,Direct
+May,24,5,Refundable,20,1,1,85.20,Contract,0,2,Corporate
+August,16,2,No Deposit,10,0,0,90.00,Transient-Party,0,0,Online TA
+June,7,7,Non Refund,30,3,0,200.00,Transient,2,1,Offline TA/TO
+September,12,4,Non Refund,15,1,1,150.00,Group,0,0,Groups
